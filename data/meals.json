@@ -1,0 +1,59 @@
+{
+    "meals": [
+        {
+            "name": "pizza",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "goulash",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "burger",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "kebab",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "noodles",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "sushi",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "pho bo",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "ramen",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "spaghetti",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "gnocci",
+            "desc": "description",
+            "price": "10EUR"
+        },
+        {
+            "name": "risotto",
+            "desc": "description",
+            "price": "10EUR"
+        }
+    ]
+}
