@@ -1,2 +1,5 @@
 # Food Order app
-new React app made with Vite
+
+React app made with Vite to train React hooks
+
+![vite logo](./src/favicon.svg)

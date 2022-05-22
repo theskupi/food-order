@@ -2,6 +2,7 @@
   border-radius: 10px;
   background: white;
   padding: 20px 30px;
+  animation: meals-appear 1s ease-out forwards;
 }
 
 .food-item {
@@ -28,4 +29,16 @@
 
 .food-item__right {
   text-align: right;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,8 +1,8 @@
-import Button from "../Button"
 import React, { useContext } from "react"
 import { createPortal } from "react-dom"
 import "./Cart.scss"
 import CartContext from "../../helpers/cart-context"
+import Button from "../Button"
 import CartModalItem from "./CartModalItem"
 
 const BackDrop = ({ onClick }) => {
@@ -15,12 +15,11 @@ const ModalOverlay = ({ hideModal }) => {
 
 	const totalPrice = ctxData.totalAmount
 
-	const cartItemAddHandler = (item) => {
-		ctxData.addItem(item)
+	const cartItemRemoveHandler = (id) => {
+		ctxData.removeItem(id)
 	}
-	const cartItemRemoveHandler = (item) => {
-		console.log(`removing data`)
-		ctxData.removeItem(item)
+	const cartItemAddHandler = (item) => {
+		ctxData.addItem({ ...item, amount: 1 })
 	}
 
 	return (
@@ -29,10 +28,10 @@ const ModalOverlay = ({ hideModal }) => {
 				{ctxData.items.map((item) => {
 					return (
 						<CartModalItem
-							data={item}
 							key={item.id}
-							onAdd={cartItemAddHandler.bind(null, item.id)}
+							data={item}
 							onRemove={cartItemRemoveHandler.bind(null, item.id)}
+							onAdd={cartItemAddHandler.bind(null, item)}
 						/>
 					)
 				})}
