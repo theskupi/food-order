@@ -5,7 +5,9 @@ import "./Cart.scss"
 function Cart({ modalHandler }) {
 	const contextData = useContext(CartContext)
 
-	const countCartItems = contextData.items.length
+	const countCartItems = contextData.items.reduce((current, item) => {
+		return current + item.amount
+	}, 0)
 
 	return (
 		<div>

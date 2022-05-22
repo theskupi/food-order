@@ -2,10 +2,7 @@ import React from "react"
 import Button from "../Button"
 import "./Cart.scss"
 
-export default function CartModalItem({ data }) {
-	const handleUp = () => {}
-	const handleDown = () => {}
-
+export default function CartModalItem({ data, onAdd, onRemove }) {
 	return (
 		<div className="cart-modal-item">
 			<div className="cart-modal-item__info">
@@ -16,8 +13,8 @@ export default function CartModalItem({ data }) {
 				</div>
 			</div>
 			<div>
-				<Button text={"-"} onClick={handleDown} />
-				<Button text={"+"} onClick={handleUp} />
+				<Button text={"-"} onClick={onRemove} />
+				<Button text={"+"} onClick={onAdd} />
 			</div>
 		</div>
 	)

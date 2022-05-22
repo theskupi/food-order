@@ -11,29 +11,52 @@ const BackDrop = ({ onClick }) => {
 
 const ModalOverlay = ({ hideModal }) => {
 	const ctxData = useContext(CartContext)
+	const hasItems = ctxData.items.length > 0
 
-	const totalPrice = ctxData.items.forEach((item) => {
-		// count total price
-	})
+	const totalPrice = ctxData.totalAmount
+
+	const cartItemAddHandler = (item) => {
+		ctxData.addItem(item)
+	}
+	const cartItemRemoveHandler = (item) => {
+		console.log(`removing data`)
+		ctxData.removeItem(item)
+	}
+
 	return (
 		<div className="cart-modal">
-			<div>
+			<div className="cart-modal__list">
 				{ctxData.items.map((item) => {
-					return <CartModalItem data={item} />
+					return (
+						<CartModalItem
+							data={item}
+							key={item.id}
+							onAdd={cartItemAddHandler.bind(null, item.id)}
+							onRemove={cartItemRemoveHandler.bind(null, item.id)}
+						/>
+					)
 				})}
 			</div>
-			<div>
-				<strong>Total amount</strong>
-				<strong>$88.99</strong>
+			<div className="cart-modal__total">
+				{hasItems ? (
+					<>
+						<strong>Total amount</strong>
+						<strong>${totalPrice}</strong>
+					</>
+				) : (
+					<p>I'm so empty.</p>
+				)}
 			</div>
 			<div className="cart-modal__control">
 				<Button onClick={hideModal} text="Close" />
-				<Button
-					onClick={() => {
-						console.log(`Sending order...`)
-					}}
-					text="Order"
-				/>
+				{hasItems && (
+					<Button
+						onClick={() => {
+							console.log(`Sending order...`)
+						}}
+						text="Order"
+					/>
+				)}
 			</div>
 		</div>
 	)
