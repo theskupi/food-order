@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import FoodItem from "./FoodItem"
 import "./FoodList.scss"
 import mealsData from "../../../data/meals.json"
 
 function FoodList() {
-	const [foodData, setFoodData] = useState(null)
+	// const [foodData, setFoodData] = useState(null)
 
 	// useEffect(() => {
 	// 	fetch("https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast")
@@ -17,13 +17,7 @@ function FoodList() {
 	return (
 		<div className="food-list">
 			{meals &&
-				meals.map((itemData) => (
-					<FoodItem
-						data={itemData}
-						price={Math.floor(Math.random() * 100)}
-						key={itemData.id}
-					/>
-				))}
+				meals.map((itemData) => <FoodItem data={itemData} key={itemData.id} />)}
 		</div>
 	)
 }

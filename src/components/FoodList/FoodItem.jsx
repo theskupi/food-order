@@ -1,16 +1,23 @@
 import Button from "../Button"
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
+import CartContext from "../../helpers/cart-context"
 
-function FoodItem({ data, price }) {
+function FoodItem({ data }) {
+	const cartCtx = useContext(CartContext)
 	const [amount, setAmount] = useState(1)
 
 	const amountHandler = (e) => {
 		setAmount(e.target.value)
-		console.log(amount)
 	}
 
 	const handleAddToCart = () => {
-		console.log(`adding item to cart`)
+		cartCtx.addItem({
+			id: data.id,
+			name: data.name,
+			price: data.price,
+			amount: amount
+		})
+		console.log(cartCtx.items)
 	}
 
 	return (
@@ -25,13 +32,15 @@ function FoodItem({ data, price }) {
 					<strong>Amount</strong>{" "}
 					<input
 						type="number"
-						name=""
-						id=""
+						name="food-item-input"
+						id={data.id}
 						value={amount}
 						onChange={amountHandler}
+						min={1}
+						max={10}
 					/>
 				</div>
-				<Button onClick={{ handleAddToCart }} text="+ Add" />
+				<Button onClick={handleAddToCart} text="+ Add" />
 			</div>
 		</div>
 	)

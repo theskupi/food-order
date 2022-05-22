@@ -1,5 +1,5 @@
 .cart-button {
-  background: rgb(74, 12, 2);
+  background: #4a0c02;
   border-radius: 25px;
   padding: 10px 25px;
   color: white;
@@ -34,7 +34,31 @@
 
 .cart-modal__control {
   text-align: right;
-  button + button {
+}
+
+.cart-modal-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  & + .cart-modal-item {
+    border-top: 2px solid #942e1c;
+  }
+}
+
+.cart-modal-item__info {
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  strong {
+    color: tomato;
+  }
+  span {
+    display: inline-block;
+    border: 1px solid lightgray;
+    padding: 3px;
+    border-radius: 5px;
     margin-left: 10px;
   }
 }
