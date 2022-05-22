@@ -1,59 +1,64 @@
 {
-    "meals": [
-        {
-            "name": "pizza",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "goulash",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "burger",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "kebab",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "noodles",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "sushi",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "pho bo",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "ramen",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "spaghetti",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "gnocci",
-            "desc": "description",
-            "price": "10EUR"
-        },
-        {
-            "name": "risotto",
-            "desc": "description",
-            "price": "10EUR"
-        }
-    ]
+	"meals": [
+		{
+			"id": 1,
+			"name": "Pizza",
+			"desc": "Pizza with tomatoes and mozzarela",
+			"price": 8
+		},
+		{
+			"id": 2,
+			"name": "Goulash",
+			"desc": "Typical czech goulash with dumplings",
+			"price": 10
+		},
+		{
+			"id": 3,
+			"name": "Burger",
+			"desc": "Jalapeno beef burger with secret dip",
+			"price": 12
+		},
+		{
+			"id": 4,
+			"name": "Kebap",
+			"desc": "Berlin style kebap",
+			"price": 6
+		},
+		{
+			"id": 5,
+			"name": "Chicken noodles",
+			"desc": "Fried nooedles with vegeteble ans chicken",
+			"price": 9
+		},
+		{
+			"id": 6,
+			"name": "Sushi",
+			"desc": "Salmon and cucumber sushi, kimchi",
+			"price": 12
+		},
+		{
+			"id": 7,
+			"name": "Pho bo",
+			"desc": "Strong chicken broth, asia style",
+			"price": 7
+		},
+		{
+			"id": 8,
+			"name": "Ramen",
+			"desc": "Naruto approves this",
+			"price": 10
+		},
+		{
+			"id": 9,
+			"name": "Spaghetti",
+			"desc": "Traditional spaghetti with pomodoro sauce",
+			"price": 12
+		},
+		{
+			"id": 10,
+			"name": "Gnocci",
+			"desc": "With baby spinach, cream and parmesan",
+			"price": 11
+		}
+	]
 }

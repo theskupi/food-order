@@ -1,0 +1,14 @@
+.navigation-wrapper {
+    background: #942e1c;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}

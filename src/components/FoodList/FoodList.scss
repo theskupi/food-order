@@ -1,0 +1,31 @@
+.food-list {
+  border-radius: 10px;
+  background: white;
+  padding: 20px 30px;
+}
+
+.food-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  & + .food-item {
+    border-top: 1px solid lightgray;
+  }
+  .price {
+    font-weight: bold;
+    color: tomato;
+  }
+  input {
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    width: 30px
+  }
+  button {
+    margin-top: 10px;
+  }
+}
+
+.food-item__right {
+  text-align: right;
+}
