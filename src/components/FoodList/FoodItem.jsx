@@ -17,7 +17,6 @@ function FoodItem({ data }) {
 			price: data.price,
 			amount: +amount
 		})
-		console.log(cartCtx.items)
 	}
 
 	return (

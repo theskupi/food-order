@@ -22,7 +22,7 @@
   z-index: 11;
   width: 50%;
   left: 25%;
-  top: 30vh;
+  top: 10vh;
 }
 
 .cart-item {
@@ -71,6 +71,37 @@
   justify-content: space-between;
   font-size: 18px;
   margin: 20px 0;
+}
+
+.checkout-form {
+  max-height: 300px;
+    overflow: auto;
+}
+
+.form-control {
+  label {
+    display: block;
+  }
+  input {
+    width: 50%;
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+    font-style: italic;
+  }
+  & + .form-control {
+    margin-top: 10px;
+  }
+  &.invalid {
+    label {
+      color: red;
+    }
+    input {
+      border-color: red;
+      background-color: pink;
+    }
+  }
 }
 
 .backdrop {
