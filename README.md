@@ -1,5 +1,7 @@
 # Food Order app
 
+[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https:///pr.new/theskupi/food-order)
+
 React app made with Vite to train React hooks
 
 ![vite logo](./src/favicon.svg)
